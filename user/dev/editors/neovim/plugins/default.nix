@@ -7,11 +7,11 @@
     ./nvim-cmp.nix
     ./telescope.nix
 
+    ./languages/lint.nix
     ./languages/lsp.nix
     ./languages/treesitter.nix
 
     ./utils/autopairs.nix
-    ./utils/comment.nix
     ./utils/indent-blankline.nix
     ./utils/mini.nix
     ./utils/todo-comments.nix
