@@ -7,7 +7,7 @@
 {
   imports = [
     ./helix.nix
-    ./neovim.nix
+    ./neovim
     ./vscode.nix
   ];
 

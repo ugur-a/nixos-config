@@ -19,6 +19,11 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim.inputs.home-manager.follows = "home-manager";
+    nixvim.inputs.flake-utils.follows = "flake-utils";
+
     plasma-manager.url = "github:nix-community/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
@@ -32,6 +37,7 @@
       firefox-addons,
       flake-utils,
       lanzaboote,
+      nixvim,
       plasma-manager,
       ...
     }@inputs:
@@ -117,6 +123,7 @@
         # the path to your home.nix.
         modules = [
           ./profiles/personal/home.nix
+          nixvim.homeManagerModules.nixvim
           plasma-manager.homeManagerModules.plasma-manager
         ];
 
