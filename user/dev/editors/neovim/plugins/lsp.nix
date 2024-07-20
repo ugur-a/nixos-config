@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixvim = {
     # Dependencies
     #
@@ -12,19 +12,6 @@
     plugins.fidget = {
       enable = true;
     };
-
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
-    extraPlugins = with pkgs.vimPlugins; [
-      # NOTE: This is how you would ad a vim plugin that is not implemented in Nixvim, also see extraConfigLuaPre below
-      # `neodev` configure Lua LSP for your Neovim config, runtime and plugins
-      # used for completion, annotations, and signatures of Neovim apis
-      neodev-nvim
-    ];
-
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
-    extraConfigLuaPre = ''
-      require('neodev').setup {}
-    '';
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
@@ -231,15 +218,6 @@
           };
         };
       };
-
-      # LSP servers and clients are able to communicate to each other what features they support.
-      #  By default, Neovim doesn't support everything that is in the LSP specification.
-      #  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-      #  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-      # NOTE: This is done automatically by Nixvim when enabling cmp-nvim-lsp below is an example if you did want to add new capabilities
-      #capabilities = ''
-      #  capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-      #'';
 
       # This function gets run when an LSP attaches to a particular buffer.
       #   That is to say, every time a new file is opened that is associated with

@@ -2,9 +2,6 @@
   programs.nixvim = {
     # Shows how to use the DAP plugin to debug your code.
     #
-    # Primarily focused on configuring the debugger for Go, but can
-    # be extended to other languages as well. That's why it's called
-    # kickstart.nixvim and not ktichen-sink.nixvim ;)
     # https://nix-community.github.io/nixvim/plugins/dap/index.html
     plugins.dap = {
       enable = true;
@@ -36,11 +33,6 @@
               disconnect = "⏏";
             };
           };
-        };
-
-        # Add your own debuggers here
-        dap-go = {
-          enable = true;
         };
       };
     };
