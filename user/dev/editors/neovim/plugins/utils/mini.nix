@@ -32,6 +32,9 @@
           use_icons.__raw = "vim.g.have_nerd_font";
         };
 
+        # Not needed (merged to Neovim)
+        # comment = {};
+
         # ... and there is more!
         # Check out: https://github.com/echasnovski/mini.nvim
       };
