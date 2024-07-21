@@ -19,10 +19,19 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.inputs.home-manager.follows = "home-manager";
-    nixvim.inputs.flake-utils.follows = "flake-utils";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+
+        devshell.follows = "";
+        flake-compat.follows = "";
+        git-hooks.follows = "";
+        home-manager.follows = "";
+        nix-darwin.follows = "";
+        treefmt-nix.follows = "";
+      };
+    };
 
     plasma-manager.url = "github:nix-community/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
