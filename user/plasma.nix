@@ -51,6 +51,11 @@ in {
       };
     };
 
+    fonts.fixedWidth = {
+      family = userSettings.fonts.mono;
+      pointSize = 10;
+    };
+
     shortcuts = {
       "kwin"."Window Maximize" = ["Meta+Up"];
       # normally it's <Right> and <Left>, respectively
