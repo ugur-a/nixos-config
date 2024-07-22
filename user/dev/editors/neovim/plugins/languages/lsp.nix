@@ -78,22 +78,18 @@
         # Diagnostic keymaps
         diagnostic = {
           "[d" = {
-            #mode = "n";
             action = "goto_prev";
             desc = "Go to previous [D]iagnostic message";
           };
           "]d" = {
-            #mode = "n";
             action = "goto_next";
             desc = "Go to next [D]iagnostic message";
           };
           "<leader>e" = {
-            #mode = "n";
             action = "open_float";
             desc = "Show diagnostic [E]rror messages";
           };
           "<leader>q" = {
-            #mode = "n";
             action = "setloclist";
             desc = "Open diagnostic [Q]uickfix list";
           };
@@ -167,14 +163,12 @@
           # Rename the variable under your cursor.
           #  Most Language Servers support renaming across files, etc.
           "<leader>rn" = {
-            #mode = "n"; TODO: FIGURE OUT HOW TO SET THIS
             action = "rename";
             desc = "LSP: [R]e[n]ame";
           };
           # Execute a code action, usually your cursor needs to be on top of an error
           # or a suggestion from your LSP for this to activate.
           "<leader>ca" = {
-            #mode = "n";
             action = "code_action";
             desc = "LSP: [C]ode [A]ction";
           };
