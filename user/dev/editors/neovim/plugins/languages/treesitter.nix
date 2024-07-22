@@ -7,24 +7,26 @@
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
     plugins.treesitter = {
       enable = true;
+      settings = {
+        highlight.enable = true;
 
-      highlight.enable = true;
+        # Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
+        incremental_selection = {
+          enable = true;
+          keymaps = {
+            # LazyGit
+            init_selection = "<C-space>";
+            node_incremental = "<C-space>";
+            scope_incremental.__raw = "false";
+            node_decremental = "<bs>";
+          };
 
-      # Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-      incremental_selection = {
-        enable = true;
-        keymaps = {
-          # LazyGit
-          init_selection = "<C-space>";
-          node_incremental = "<C-space>";
-          scope_incremental.__raw = "false";
-          node_decremental = "<bs>";
+          # There are additional nvim-treesitter modules that you can use to interact
+          # with nvim-treesitter. You should go explore a few and see what interests you:
+          #
+          #    - Show your current context: https://nix-community.github.io/nixvim/plugins/treesitter-context/index.html
         };
       };
-      # There are additional nvim-treesitter modules that you can use to interact
-      # with nvim-treesitter. You should go explore a few and see what interests you:
-      #
-      #    - Show your current context: https://nix-community.github.io/nixvim/plugins/treesitter-context/index.html
     };
 
     # Treesitter + textobjects: https://nix-community.github.io/nixvim/plugins/treesitter-textobjects/index.html
