@@ -4,6 +4,7 @@
     ./certificates
     ./ddcci-plasmoid.nix
     #./flatpak.nix
+    ./fonts.nix
     ./hardware-configuration.nix
     ./maintenance.nix
     ./nix.nix
