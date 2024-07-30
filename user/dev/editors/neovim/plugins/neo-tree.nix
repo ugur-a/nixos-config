@@ -19,9 +19,7 @@
       {
         key = "\\";
         action = "<cmd>Neotree reveal<cr>";
-        options = {
-          desc = "NeoTree reveal";
-        };
+        options.desc = "NeoTree reveal";
       }
     ];
   };

@@ -46,9 +46,7 @@
             require('conform').format { async = true, lsp_fallback = true }
           end
         '';
-        options = {
-          desc = "[F]ormat buffer";
-        };
+       options.desc = "[F]ormat buffer";
       }
     ];
   };
