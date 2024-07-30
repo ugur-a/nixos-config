@@ -11,6 +11,9 @@
     ./languages/lsp.nix
     ./languages/treesitter.nix
 
+    ./languages/nix.nix
+    ./languages/rust.nix
+
     ./utils/autopairs.nix
     ./utils/indent-blankline.nix
     ./utils/mini.nix

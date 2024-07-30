@@ -5,16 +5,23 @@
     plugins.neo-tree = {
       enable = true;
 
+      window.position = "right";
+
+      # Sources
+      #
       filesystem = {
-        window = {
-          mappings = {
-            "\\" = "close_window";
-          };
+        bindToCwd = true;
+        followCurrentFile.enable = true;
+
+        filtered_items = {
+          visible = true;
+          show_hidden_count = true;
+          hide_dotfiles = false;
+          hide_gitignored = false;
         };
       };
     };
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       {
         key = "\\";
