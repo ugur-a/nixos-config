@@ -12,7 +12,11 @@
       # https://github.com/LazyVim/LazyVim/issues/283#issuecomment-1433390326
       {
         key = "<C-p>";
-        action.__raw = "<cmd>lua require('telescope').extensions.project.project{}<cr>";
+        action.__raw = ''
+          function()
+            require('telescope').extensions.project.project{}
+          end
+        '';
         options.desc = "Find Projects";
       }
     ];
