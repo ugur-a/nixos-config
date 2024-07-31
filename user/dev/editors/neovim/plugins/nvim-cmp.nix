@@ -111,18 +111,12 @@
         # If you use a raw lua string, you will need to explicitly enable the relevant source
         # plugins in your nixvim configuration.
         sources = [
-          {
-            name = "luasnip";
-          }
+          { name = "luasnip"; }
           # Adds other completion capabilites.
           #  nvim-cmp does not ship with all sources by default. They are split
           #  into multiple repos for maintenance purposes.
-          {
-            name = "nvim_lsp";
-          }
-          {
-            name = "path";
-          }
+          { name = "nvim_lsp"; }
+          { name = "path"; }
         ];
       };
     };

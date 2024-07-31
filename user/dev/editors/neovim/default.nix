@@ -1,4 +1,10 @@
-{config, lib, pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./config
     ./plugins
@@ -17,7 +23,5 @@
     ];
   };
 
-  programs.zsh.shellAliases = lib.mkIf config.programs.nixvim.enable {
-    "n" = "nvim";
-  };
+  programs.zsh.shellAliases = lib.mkIf config.programs.nixvim.enable { "n" = "nvim"; };
 }

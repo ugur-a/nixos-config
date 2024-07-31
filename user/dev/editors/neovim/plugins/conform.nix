@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     # Dependencies
     #
@@ -26,7 +27,7 @@
         end
       '';
       formattersByFt = {
-        lua = ["stylua"];
+        lua = [ "stylua" ];
         # Conform can also run multiple formatters sequentially
         # python = [ "isort "black" ];
         #
@@ -46,7 +47,7 @@
             require('conform').format { async = true, lsp_fallback = true }
           end
         '';
-       options.desc = "[F]ormat buffer";
+        options.desc = "[F]ormat buffer";
       }
     ];
   };
