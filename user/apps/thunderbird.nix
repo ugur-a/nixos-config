@@ -5,7 +5,20 @@
     profiles."${userSettings.username}" = {
       isDefault = true;
     };
+    settings = {
+      browser = {
+        # automatically send crash reports
+        crashReports.unsubmittedCheck.autoSubmit2 = true;
+      };
+      mail = {
+        SpellCheckBeforeSend = true;
+        # automatically save draft every N minutes
+        compose.autosaveinterval = 1;
+        spellchecker.dictionary = "en-US,de-DE";
+      };
+    };
   };
+
   accounts.email.accounts = {
     "gmail".thunderbird = {
       enable = true;
