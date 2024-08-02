@@ -6,6 +6,7 @@ in
   imports = [
     ./rc2nix.nix
 
+    ./input.nix
     ./night-light.nix
     ./panels.nix
     ./shortcuts.nix
@@ -17,13 +18,6 @@ in
     overrideConfig = true;
 
     configFile = {
-      # TODO switch to the high-level input module once it lands
-      # https://github.com/nix-community/plasma-manager/pull/123
-      "kcminputrc"."Libinput/1267/12553/ELAN2204:00 04F3:3109 Touchpad" = {
-        "ClickMethod" = 2; # tap-to-click
-        "NaturalScroll" = true;
-        "PointerAcceleration" = 0.2;
-      };
       # disable the hot corner (aka. Screen Edge)
       "kwinrc"."Effect-overview"."BorderActivate" = 9;
       "kxkbrc"."Layout"."ResetOldOptions" = true;
